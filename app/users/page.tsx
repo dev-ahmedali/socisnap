@@ -1,11 +1,13 @@
-'use client'
+"use client";
 
-const User = () => {
-    return(
-        <div>
+import { signOut } from "next-auth/react";
 
-        </div>
-    )
-}
+const Users = () => {
+  return (
+    <div className="hidden lg:block lg:pl-80 h-full">
+        <EmptyState/>
+    </div>
+  )
+};
 
-export default User
+export default Users;

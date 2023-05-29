@@ -1,15 +1,14 @@
-import Sidebar from "../components/sidebar/Sidebar"
+import Sidebar from "../components/sidebar/Sidebar";
 
 export default async function UsersLayout({
-    children
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <Sidebar/>
-        <div className="h-full">
-            {children}
-        </div>
-        <Sidebar/>
-    )
+  return (
+    //@ts-expect-error Server Components
+    <Sidebar>
+      <div className="h-full">{children}</div>
+    </Sidebar>
+  );
 }

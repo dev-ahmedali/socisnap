@@ -1,5 +1,6 @@
 import prisma from "@/app/libs/prismadb";
 import getSession from "./getSession";
+import Users from "../users/page";
 
 
 const getUsers = async () => {
@@ -21,7 +22,7 @@ const getUsers = async () => {
       },
     });
 
-    return users;
+    return Users;
   } catch (error: any) {
     return [];
   }

@@ -9,7 +9,9 @@ export default async function conversationsLayout({
   return (
     // @ts-expect-error Server Component
     <Sidebar>
-      <div className="h-full">{children}</div>
+      <div className="h-full">
+        <ConversationList initialItems={[]}/>
+        {children}</div>
     </Sidebar>
   );
 }

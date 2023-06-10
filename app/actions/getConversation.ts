@@ -28,7 +28,10 @@ const getConversation = async () => {
         }
       },
     });
+    return conversations; 
   } catch (error: any) {
     return [];
   }
 };
+
+export default getConversation
